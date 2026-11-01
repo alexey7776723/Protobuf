@@ -1,0 +1,9 @@
+syntax = "proto3";
+package profile;
+option java_package = "dev.alexey_and_evgeniy.proto.profile";
+option java_multiple_files = true;
+
+message CommentDTO {
+  int64 user_id = 1;
+  string text = 2;
+}
