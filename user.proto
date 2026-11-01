@@ -1,0 +1,9 @@
+syntax = "proto3";
+package user;
+option java_package = "dev.alexey_and_evgeniy.proto.uыer";
+option java_multiple_files = true;
+
+message UserDTO {
+  string emailTo = 1;
+  string token = 2;
+}

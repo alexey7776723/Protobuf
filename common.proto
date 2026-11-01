@@ -3,10 +3,18 @@ package common;
 option java_package = "dev.alexey_and_evgeniy.proto.common";
 option java_multiple_files = true;
 
-import "google/protobuf/timestamp.proto";
+//import "google/protobuf/timestamp.proto";
 
 message ErrorResponse {
   string message = 1;
   int32 status = 2;
-  google.protobuf.Timestamp timestamp = 3;
+  int64 timestamp = 3;
+  //google.protobuf.Timestamp timestamp = 3;
+}
+
+// 🆕 НОВОЕ ДОПОЛНЕНИЕ: Единый формат для успешных ответов
+message SuccessResponse {
+  string message = 1;
+  int64 timestamp = 2;
+  //google.protobuf.Timestamp timestamp = 2;
 }
